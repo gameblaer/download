@@ -84,7 +84,7 @@ export function getGenderByOrderType(order: any): string {
 
 export const upperCaseIfNotStartsWithNumber = (object: any): any => {
 
-    const keys = Object.keys(object)
+/*    const keys = Object.keys(object)
 
     keys.forEach(function (key) {
         if (isNaN(parseInt(object[key]))) {
@@ -92,6 +92,14 @@ export const upperCaseIfNotStartsWithNumber = (object: any): any => {
         }
     })
 
-    return object
+    return object*/
+
+    //version 2
+    for(let key in object){
+        if (isNaN(parseInt(object[key]))) {
+            object[key] = object[key].toUpperCase()
+        }
+    }
+    return object;
 };
 

@@ -379,6 +379,10 @@ testIt( [
         result: "FEMALE"
     },
     {
+        arr: {type: "fLigHT", genre: "f"},
+        result: "FEMALE"
+    },
+    {
         arr: {type: "vacations", genre: "F"},
         result: ""
     },

@@ -79,12 +79,21 @@ function getGenderByOrderType(order) {
 }
 exports.getGenderByOrderType = getGenderByOrderType;
 var upperCaseIfNotStartsWithNumber = function (object) {
-    var keys = Object.keys(object);
-    keys.forEach(function (key) {
+    /*    const keys = Object.keys(object)
+    
+        keys.forEach(function (key) {
+            if (isNaN(parseInt(object[key]))) {
+                object[key] = object[key].toUpperCase()
+            }
+        })
+    
+        return object*/
+    //version 2
+    for (var key in object) {
         if (isNaN(parseInt(object[key]))) {
             object[key] = object[key].toUpperCase();
         }
-    });
+    }
     return object;
 };
 exports.upperCaseIfNotStartsWithNumber = upperCaseIfNotStartsWithNumber;
