@@ -18,6 +18,7 @@ public class Main {
         }
 
         String[] arrIn;
+        //choose file: true or false, true little, false big
         if (false) arrIn = MyFile.reading("src\\test\\example.in", false);
         else arrIn = MyFile.reading("src\\test\\example_big.in", false);
 
